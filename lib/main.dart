@@ -1,4 +1,4 @@
-import 'package:enqueue/screens/EnqueueHomePage.dart';
+import 'package:enqueue/screens/EnqueueHome.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -27,7 +27,7 @@ class EnqueueApp extends StatelessWidget {
         ),
         initialRoute: '/',
         routes: <String, WidgetBuilder>{
-          '/': (context) => EnqueueHomePage(),
+          '/': (context) => EnqueueHome(),
         });
   }
 }
