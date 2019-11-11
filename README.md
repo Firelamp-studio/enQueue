@@ -1,6 +1,6 @@
-# enqueue
+# enQueue
 
-An application whose intent is to minimize the waitings when we are in line with the doctor and many other situations of our life to save our precious time.
+An application whose intent is to minimize the waiting when we are in line with the doctor and many other situations of our life to save our precious time.
 
 ## Getting Started
 
