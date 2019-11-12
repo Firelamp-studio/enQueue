@@ -2,8 +2,8 @@ import 'package:enqueue/pages/DocumentsPage.dart';
 import 'package:enqueue/pages/QueuesPage.dart';
 import 'package:flutter/material.dart';
 
-class EnqueueHome extends StatefulWidget {
-  EnqueueHome({Key key}) : super(key: key);
+class DoctorScreen extends StatefulWidget {
+  DoctorScreen({Key key}) : super(key: key);
 
   final List<Widget> pages = [
     QueuesPage(),
@@ -11,10 +11,10 @@ class EnqueueHome extends StatefulWidget {
   ];
 
   @override
-  _EnqueueHomeState createState() => _EnqueueHomeState();
+  _DoctorScreenState createState() => _DoctorScreenState();
 }
 
-class _EnqueueHomeState extends State<EnqueueHome>
+class _DoctorScreenState extends State<DoctorScreen>
     with TickerProviderStateMixin {
   //int _selectedPage = 0;
   TabController _controller;

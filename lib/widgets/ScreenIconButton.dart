@@ -7,6 +7,7 @@ class ScreenIconButton extends StatelessWidget {
         this.onTap,
         this.backgroundColor = Colors.blue,
         this.foregroundColor = Colors.white,
+        this.iconSize = 50,
         Key key})
       : super(key: key);
 
@@ -15,6 +16,7 @@ class ScreenIconButton extends StatelessWidget {
   final Function onTap;
   final Color foregroundColor;
   final Color backgroundColor;
+  final double iconSize;
 
   @override
   Widget build(BuildContext context) {
@@ -31,7 +33,7 @@ class ScreenIconButton extends StatelessWidget {
               Icon(
                 icon,
                 color: foregroundColor,
-                size: MediaQuery.of(context).size.width / 2.5,
+                size: iconSize,
               ),
               Text(
                 text,

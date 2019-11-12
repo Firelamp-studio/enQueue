@@ -1,18 +1,21 @@
-import 'package:enqueue/screens/EnqueueHome.dart';
+import 'package:enqueue/screens/DoctorScreen.dart';
+import 'package:enqueue/screens/HomeScreen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-void main() => runApp(EnqueueApp());
+void main() {
+  SystemChrome.setPreferredOrientations([
+    DeviceOrientation.portraitUp,
+  ]);
+  runApp(EnqueueApp());
+}
 
 class EnqueueApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    SystemChrome.setPreferredOrientations([
-      DeviceOrientation.portraitUp,
-    ]);
     return MaterialApp(
-        title: 'Enqueue',
+        title: 'enQueue',
         theme: ThemeData(
           // This is the theme of your application.
           //
@@ -27,7 +30,8 @@ class EnqueueApp extends StatelessWidget {
         ),
         initialRoute: '/',
         routes: <String, WidgetBuilder>{
-          '/': (context) => EnqueueHome(),
+          '/': (context) => HomeScreen(),
+          '/doctor': (context) => DoctorScreen(),
         });
   }
 }
