@@ -28,25 +28,64 @@ class HomeScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: <Widget>[
             Expanded(
-                child: ScreenIconButton(
-              onTap: () {},
-              icon: Icons.healing,
-              text: "Medico",
-            )),
+                child: Hero(
+                  tag: 'doctorBody',
+                  child: ScreenIconButton(
+                    onTap: () {
+                      Navigator.of(context).pushNamed('/doctor');
+                    },
+                    icon: Icons.healing,
+                    text: "Medico",
+                  ),
+                )),
             Expanded(
-                child: ScreenIconButton(
-              onTap: () {},
-              icon: Icons.attach_money,
-              text: "Privati",
-              backgroundColor: Colors.green,
-            )),
+              child: Stack(
+                children: <Widget>[
+                  ScreenIconButton(
+                    onTap: () {},
+                    icon: Icons.account_balance,
+                    text: "Statali",
+                    backgroundColor: Colors.amber,
+                  ),
+                  Positioned.fill(
+                      child: Opacity(
+                    opacity: 0.75,
+                    child: Container(
+                      color: Colors.grey,
+                      child: Icon(
+                        Icons.lock,
+                        size: 150,
+                        color: Colors.white,
+                      ),
+                    ),
+                  )),
+                ],
+              ),
+            ),
             Expanded(
-                child: ScreenIconButton(
-              onTap: () {},
-              icon: Icons.account_balance,
-              text: "Statali",
-              backgroundColor: Colors.amber,
-            )),
+              child: Stack(
+                children: <Widget>[
+                  ScreenIconButton(
+                    onTap: () {},
+                    icon: Icons.attach_money,
+                    text: "Privati",
+                    backgroundColor: Colors.green,
+                  ),
+                  Positioned.fill(
+                      child: Opacity(
+                    opacity: 0.75,
+                    child: Container(
+                      color: Colors.grey,
+                      child: Icon(
+                        Icons.lock,
+                        size: 150,
+                        color: Colors.white,
+                      ),
+                    ),
+                  )),
+                ],
+              ),
+            ),
           ],
         ),
       ),

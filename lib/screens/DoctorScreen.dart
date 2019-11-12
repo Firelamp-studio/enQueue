@@ -5,18 +5,12 @@ import 'package:flutter/material.dart';
 class DoctorScreen extends StatefulWidget {
   DoctorScreen({Key key}) : super(key: key);
 
-  final List<Widget> pages = [
-    QueuesPage(),
-    SchedulePage(),
-  ];
-
   @override
   _DoctorScreenState createState() => _DoctorScreenState();
 }
 
 class _DoctorScreenState extends State<DoctorScreen>
     with TickerProviderStateMixin {
-  //int _selectedPage = 0;
   TabController _controller;
 
   @override
@@ -46,13 +40,19 @@ class _DoctorScreenState extends State<DoctorScreen>
           )
         ],
         title: Text(
-          "enQueue",
+          "Medico",
           style: TextStyle(color: Colors.blue),
         ),
         iconTheme: IconThemeData(color: Colors.blue),
       ),
       body: SafeArea(
-        child: TabBarView(controller: _controller, children: widget.pages),
+        child: Hero(
+          tag: 'doctorBody',
+          child: TabBarView(controller: _controller, children: [
+            QueuesPage(),
+            SchedulePage(),
+          ]),
+        ),
       ),
     );
   }

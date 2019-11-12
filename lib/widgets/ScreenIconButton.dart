@@ -7,7 +7,7 @@ class ScreenIconButton extends StatelessWidget {
         this.onTap,
         this.backgroundColor = Colors.blue,
         this.foregroundColor = Colors.white,
-        this.iconSize = 50,
+        this.iconSize = 75,
         Key key})
       : super(key: key);
 
