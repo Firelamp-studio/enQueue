@@ -1,3 +1,5 @@
+import 'package:enqueue/utils/Router.dart';
+import 'package:enqueue/widgets/AnimatedScreenIconButton.dart';
 import 'package:enqueue/widgets/ScreenIconButton.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
@@ -29,15 +31,15 @@ class HomeScreen extends StatelessWidget {
           children: <Widget>[
             Expanded(
                 child: Hero(
-                  tag: 'doctorBody',
-                  child: ScreenIconButton(
-                    onTap: () {
-                      Navigator.of(context).pushNamed('/doctor');
-                    },
-                    icon: Icons.healing,
-                    text: "Medico",
-                  ),
-                )),
+              tag: 'doctorBody',
+              child: ScreenIconButton(
+                onTap: () {
+                  Navigator.of(context).pushNamed(Router.DOCTOR_ROUTE);
+                },
+                icon: Icons.healing,
+                text: "Medico",
+              ),
+            )),
             Expanded(
               child: Stack(
                 children: <Widget>[

@@ -5,6 +5,9 @@ class QueuesPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
+    final iconSize = MediaQuery.of(context).size.width / 2.5;
+
     return Column(
       children: [
         Expanded(
@@ -13,7 +16,7 @@ class QueuesPage extends StatelessWidget {
             icon: Icons.local_offer,
             text: "METTITI IN CODA",
             backgroundColor: Colors.blue[600],
-            iconSize: MediaQuery.of(context).size.width / 2.5,
+            iconSize: iconSize,
           ),
         ),
         Expanded(
@@ -21,7 +24,7 @@ class QueuesPage extends StatelessWidget {
             onTap: () {},
             icon: Icons.search,
             text: "TROVA CODE ELETTRONICHE",
-            iconSize: MediaQuery.of(context).size.width / 2.5,
+            iconSize: iconSize,
           ),
         )
       ],

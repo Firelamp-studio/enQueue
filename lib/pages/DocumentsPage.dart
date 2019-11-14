@@ -4,6 +4,9 @@ import 'package:flutter/material.dart';
 class SchedulePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+
+    final iconSize = MediaQuery.of(context).size.width / 2.5;
+
     return Column(
       children: [
         Expanded(
@@ -12,7 +15,7 @@ class SchedulePage extends StatelessWidget {
             icon: Icons.border_color,
             text: "PRENOTA RICETTA",
             backgroundColor: Colors.blue[600],
-            iconSize: MediaQuery.of(context).size.width / 2.5,
+            iconSize: iconSize,
           ),
         ),
         Expanded(
@@ -20,7 +23,7 @@ class SchedulePage extends StatelessWidget {
             onTap: () {},
             icon: Icons.calendar_today,
             text: "PRENOTA VISITA",
-            iconSize: MediaQuery.of(context).size.width / 2.5,
+            iconSize: iconSize,
           ),
         )
       ],
